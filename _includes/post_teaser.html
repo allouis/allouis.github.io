@@ -1,0 +1,14 @@
+
+<a class="post-teaser-link" href="{{ post.url }}">
+    <div class="post-teaser">
+        <h2>
+            {{ post.title }} 
+        </h2>
+        {% if post.description %}
+        {% assign description = post.description %}
+        {% else %}
+        {% assign description = content %}
+        {% endif %}
+        <p> {{ description | truncate 1500}} </p>
+    </div>
+</a>

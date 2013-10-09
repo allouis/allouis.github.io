@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<section id="splash-block">
+    <div id="splash-title">
+        <h1> {{ site.splashTitle }} </h1>
+    </div>
+    <div id="splash-content">
+        <div class="splash-content-item"> 
+            <p> {{ site.splashText }} </p>
+        </div>
+        <div class="splash-content-item"> 
+            <img src="{{ site.splashImg }}"/>
+        </div>
+    </div>
+</section>
+
+<section id="main">
+
+    <div id="code">
+        <a href="http://github.com/allouis">
+            <h2> Code </h2>
+        </a>
+    </div>
+
+    <div id="prose">
+        <a href="/prose">
+            <h2> Prose </h2>
+        </a>
+    </div>
+
+</section>
+
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
+{% include post.html %}
+

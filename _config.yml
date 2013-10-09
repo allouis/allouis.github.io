@@ -1,0 +1,15 @@
+name: "Allouis"
+description: "A collection of code && prose"
+
+url: "http://localhost:8000"
+
+paginate: 1 
+
+markdown: rdiscount
+permalink: pretty
+pygments: true
+
+splashTitle: "Hey, I'm Allouis"
+splashText: "Developer | Brighton"
+
+whatever: "blah blah blah"

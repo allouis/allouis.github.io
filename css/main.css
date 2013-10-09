@@ -1,0 +1,105 @@
+body {
+    font-family: Helvetica Neue;
+    font-weight:200;
+    margin: 0;
+    color: rgb(55,55,55);
+    padding-top: 30px;
+}
+a, a:hover, a:visited {
+    text-decoration:none;    
+    color: rgb(55,55,55);
+    font-weight:200;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight:200;
+}
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(167, 62, 187);
+    height: 30px;
+    top: 0px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+header a {
+    padding: 5px;
+
+    height: 30px;
+    /* vertical-align: middle; */
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 10px;
+}
+
+#splash-block {
+    background-color: rgb(54, 164, 114);
+    border-bottom: 5px solid rgb(55,55,55);
+}
+
+#splash-title {
+    text-align: center;
+    /* padding: 80px; */
+    /* padding-left: 0px; */
+    padding-top: 80px;
+}
+
+#splash-title h1 {
+    font-size: 70px;
+    font-weight: 100;
+    color: rgb(242, 202, 0);
+}
+
+#splash-content {
+    text-align: center;
+}
+
+.splash-content-item {
+    font-size: 23px;
+    color: rgb(242, 202, 0);
+}
+
+#main {
+    background-color: rgb(38, 134, 198);
+    height: 65px;
+    padding: 0px 80px;
+}
+
+#main div {
+    width: 50%;
+    float: left;
+}
+
+#main a {
+    text-align: center;
+
+    display: block;
+    font-weight: 200;
+    /* width: 20%; */
+    padding: 0px 20px;
+}
+header a:hover, #main a:hover {
+    background-color:rgba(255,255,255,0.3)
+}
+
+#code {
+
+}
+
+#code a {
+    float: right;
+
+    margin-right: 50px;
+}
+
+#prose {
+
+}
+
+#prose a {
+    float: left;
+
+    margin-left: 50px;
+}
+
