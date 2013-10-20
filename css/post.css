@@ -2,61 +2,17 @@
 
     width: 600px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 1em;
     
 
     box-sizing: border-box;
 
-    padding: 30px;
-
-}
-
-.post .content h1 {
-    font-size: 40px;
-
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-}
-
-.post info {
-    float: right;
-
-    /* width: 100%; */
-    /* text-align: right; */
-    /* width: 900px; */
-    /* display: block; */
-    /* margin-top: 10px; */
-}
-
-.post .content {
-    margin-top: 30px;
-    padding-top: 0px;
-    border-top: 1px solid rgb(55, 55, 55);
-}
-
-.post .content p {
-
-}
-
-.post .content code {
-
-}
-
-.post .content pre {
-
-}
-
-.post {
-    width: 600px;
-    margin: auto;
-    margin-top: 100px;
-    box-sizing: border-box;
-    padding: 30px;
+    padding: 3em;
 
 }
 
 .post h1 {
-    font-size: 60px;
+    font-size: 4em;
 
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
@@ -64,18 +20,13 @@
 
 .post info {
     float: right;
-
-    /* width: 100%; */
-    /* text-align: right; */
-    /* width: 900px; */
-    /* display: block; */
-    /* margin-top: 10px; */
 }
 
 .post .content {
-    margin-top: 30px;
+    margin-top: 3em;
     padding-top: 0px;
     border-top: 1px solid rgb(55, 55, 55);
+    font-size:1.6em;
 }
 
 .post .content p {
@@ -89,6 +40,8 @@
 .post .content pre {
 
 }
+
+
 .post-teaser-link:hover .post-teaser {
     box-shadow: inset 0px 0px 5px rgba(30, 30, 30, 0.3);
     
@@ -140,4 +93,12 @@
 
 .post-teaser p {
 
+}
+
+@media all and (max-width: 600px){
+
+    .post, 
+    .post-teaser {
+        width:100%;
+    }
 }

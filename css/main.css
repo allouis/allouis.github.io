@@ -3,7 +3,8 @@ body {
     font-weight:200;
     margin: 0;
     color: rgb(55,55,55);
-    padding-top: 30px;
+    padding-top: 3em;
+    font-size:62.5%;
 }
 a, a:hover, a:visited {
     text-decoration:none;    
@@ -17,16 +18,14 @@ header {
     position: fixed;
     width: 100%;
     background-color: rgb(167, 62, 187);
-    height: 30px;
+    height: 3em;
     top: 0px;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 header a {
-    padding: 5px;
-
-    height: 30px;
-    /* vertical-align: middle; */
+    padding: 0.4em;
+    font-size:1.6em;
     display: block;
     box-sizing: border-box;
     float: left;
@@ -42,11 +41,11 @@ header a {
     text-align: center;
     /* padding: 80px; */
     /* padding-left: 0px; */
-    padding-top: 80px;
+    padding-top: 8em;
 }
 
 #splash-title h1 {
-    font-size: 70px;
+    font-size: 7em;
     font-weight: 100;
     color: rgb(242, 202, 0);
 }
@@ -56,14 +55,14 @@ header a {
 }
 
 .splash-content-item {
-    font-size: 23px;
+    font-size: 2.3em;
     color: rgb(242, 202, 0);
 }
 
 #main {
     background-color: rgb(38, 134, 198);
-    height: 65px;
-    padding: 0px 80px;
+    padding: 0em 8em;
+    overflow:hidden;
 }
 
 #main div {
@@ -77,7 +76,7 @@ header a {
     display: block;
     font-weight: 200;
     /* width: 20%; */
-    padding: 0px 20px;
+    padding: 0em 2em;
 }
 header a:hover, #main a:hover {
     background-color:rgba(255,255,255,0.3)
@@ -90,7 +89,7 @@ header a:hover, #main a:hover {
 #code a {
     float: right;
 
-    margin-right: 50px;
+    margin-right: 5em;
 }
 
 #prose {
@@ -100,6 +99,13 @@ header a:hover, #main a:hover {
 #prose a {
     float: left;
 
-    margin-left: 50px;
+    margin-left: 5em;
 }
 
+@media all and (max-width: 420px){
+
+    body {
+        font-size:50%;
+    } 
+
+}
