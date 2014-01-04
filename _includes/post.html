@@ -1,9 +1,9 @@
 <article class="post">
-<h1> {{ post.title }}
-    <i datetime="{{post.date}}">
-        {{ post.date | date_to_long_string }}
-    </i>
-</h1>
+    <h1> {{ post.title }}
+        <p class="date" datetime="{{post.date}}">
+            {{ post.date | date_to_long_string }}
+        </p>
+    </h1>
     <div class="content">
         {{content}}
     </div>
