@@ -11,6 +11,7 @@
 .post .date {
     float: right;
     font-size:11px;
+    font-style:normal;
 }
 
 .post .content {

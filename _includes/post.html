@@ -1,8 +1,8 @@
 <article class="post">
     <h1> {{ post.title }}
-        <p class="date" datetime="{{post.date}}">
+        <i class="date" datetime="{{post.date}}">
             {{ post.date | date_to_long_string }}
-        </p>
+        </i>
     </h1>
     <div class="content">
         {{content}}
