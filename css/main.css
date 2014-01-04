@@ -14,3 +14,17 @@ a, a:hover, a:visited {
 h1,h2,h3,h4,h5,h6 {
     font-weight:200;
 }
+.image-holder {
+    margin:0px auto 5px;
+    border: 4px solid rgb(255,255,255);
+    border-radius:5px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    width:100px;
+    height:100px;
+}
+
+.image-holder img {
+    border-radius:3px;
+    width:100%;
+}
