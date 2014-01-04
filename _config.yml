@@ -1,15 +1,10 @@
-name: "Allouis"
-description: "A collection of code && prose"
+name: "allouis"
+description: "Blog && Code"
 
-url: "http://localhost:8000"
+url: "allou.is"
 
 paginate: 1 
 
 markdown: rdiscount
 permalink: pretty
 pygments: true
-
-splashTitle: "Hey, I'm Allouis"
-splashText: "Developer | Brighton"
-
-whatever: "blah blah blah"
