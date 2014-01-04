@@ -1,0 +1,45 @@
+/**
+ * Solarized Colors
+ */
+html.light {
+  background-color: #fdf6e3;
+  color: #657b83;
+}
+html.light * {
+  color: #657b83;
+}
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html.light a,
+html.light a:active,
+html.light a:visited {
+  color: #586e75;
+}
+html.dark {
+  background-color: #002b36;
+  color: #839496;
+}
+html.dark * {
+  color: #839496;
+}
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: #93a1a1;
+  border-color: #839496;
+}
+html.dark a,
+html.dark a:active,
+html.dark a:visited {
+  color: #93a1a1;
+}
