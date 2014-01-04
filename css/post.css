@@ -8,8 +8,9 @@
 .post h1 {
 }
 
-.post i {
+.post .date {
     float: right;
+    font-size:11px;
 }
 
 .post .content {
