@@ -18,7 +18,7 @@ green     #859900  operators, other keywords
  
 .highlight { color: #586e75 }
 html.light .highlight { background-color: #fdf6e3}
-html.dark .highlight { background-color: #fdf6e3}
+html.dark .highlight { background-color: #002B36}
 .highlight .c { color: #93a1a1 } /* Comment */
 .highlight .err { color: #586e75 } /* Error */
 .highlight .g { color: #586e75 } /* Generic */
