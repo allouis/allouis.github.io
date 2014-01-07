@@ -42,7 +42,7 @@ if (changeBg) {
 
 function randomHighlights() {
     var highlightIndex = getRandomHighlightIndex();
-    var oldIndex = localStorage.getItem("oldHighlighIndex");
+    var oldIndex = localStorage.getItem("oldHighlightIndex");
     if(highlightIndex === parseInt(oldIndex, 10)) {
         return randomHighlights();
     }
