@@ -6,6 +6,7 @@
 }
 
 .post h1 {
+
 }
 
 .post .date {
@@ -18,11 +19,15 @@
 }
 
 .post .content p {
-
+    font-size:1.6em;
 }
 
 .post .content code {
+    font-size:1.2em;
+}
 
+.post .content p code {
+    font-size:0.75em;
 }
 
 .post .content pre {
