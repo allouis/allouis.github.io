@@ -1,3 +1,6 @@
+if(!localStorage.getItem("oldHighlightIndex")) {
+    localStorage.setItem("oldHighlightIndex", 1000);
+}
 var highlight = "yellow";
 var isLight = true;
 var highlights = [
@@ -37,6 +40,17 @@ if (changeBg) {
     switchBg();
 }
 
-var highlightIndex = Math.floor(Math.random() * 7);
+function randomHighlights() {
+    var highlightIndex = getRandomHighlightIndex();
+    var oldIndex = localStorage.getItem("oldHighlighIndex");
+    if(highlightIndex === parseInt(oldIndex, 10)) {
+        return randomHighlights();
+    }
+    localStorage.setItem("oldHighlightIndex", highlightIndex);
+    setHighlight(highlights[highlightIndex]);
+}
 
-setHighlight(highlights[highlightIndex]);
+function getRandomHighlightIndex(){
+    return Math.floor(Math.random() * 7);
+}
+randomHighlights();
