@@ -7,8 +7,9 @@ var highlights = [
     "green",
     "cyan",
     "orange",
-    "magenta"
-]
+    "magenta",
+    "violet"
+];
 var html = document.querySelector("html");
 function switchBg(){
     if(isLight){
@@ -29,3 +30,13 @@ function setHighlight(color){
     html.classList.add(color);
     highlight = color;
 }
+
+var changeBg = Math.round(Math.random());
+
+if (changeBg) {
+    switchBg();
+}
+
+var highlightIndex = Math.floor(Math.random() * 7);
+
+setHighlight(highlights[highlightIndex]);
