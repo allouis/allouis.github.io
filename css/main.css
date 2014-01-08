@@ -27,6 +27,7 @@ h1,h2,h3,h4,h5,h6 {
 header p {
     margin:0px auto;
     text-align:center;
+    text-size:1.3em;
 }
 
 a {
