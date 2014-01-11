@@ -235,3 +235,33 @@ html.green h6,
 .green h6 {
   color: #859900;
 }
+html.light .color-scheme .box.bg {
+  background-color: #002b36;
+}
+html.dark .color-scheme .box.bg {
+  background-color: #fdf6e3;
+}
+.color-scheme .box.yellow {
+  background-color: #b58900;
+}
+.color-scheme .box.orange {
+  background-color: #cb4b16;
+}
+.color-scheme .box.red {
+  background-color: #dc322f;
+}
+.color-scheme .box.magenta {
+  background-color: #d33682;
+}
+.color-scheme .box.violet {
+  background-color: #6c71c4;
+}
+.color-scheme .box.blue {
+  background-color: #268bd2;
+}
+.color-scheme .box.cyan {
+  background-color: #2aa198;
+}
+.color-scheme .box.green {
+  background-color: #859900;
+}
