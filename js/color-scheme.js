@@ -27,11 +27,12 @@ function switchBg(){
 
 function setHighlight(color){
     if(highlights.indexOf(color) < 0){
-        return console.error("Not a valid colour");
+        return false;
     }
     html.classList.remove(highlight);
     html.classList.add(color);
     highlight = color;
+    return true;
 }
 
 var changeBg = Math.round(Math.random());
@@ -54,3 +55,13 @@ function getRandomHighlightIndex(){
     return Math.floor(Math.random() * 7);
 }
 randomHighlights();
+
+var boxes = [].slice.call(document.querySelectorAll('.color-scheme .box'));
+
+boxes.forEach(function(box){
+    box.addEventListener('click', function(){
+        if (!setHighlight(box.classList[1])) {
+            switchBg();
+        }
+    });
+});
