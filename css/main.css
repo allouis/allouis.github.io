@@ -83,4 +83,7 @@ a:hover {
     body {
         font-size:60%;
     }
+    .bg-button.light {
+        float:left;
+    }
 }
