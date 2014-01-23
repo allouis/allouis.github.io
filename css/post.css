@@ -31,7 +31,7 @@
 }
 
 .post .content pre {
-    overflow-x: scroll;
+    overflow-x: visible;
 }
 
 
@@ -40,5 +40,14 @@
     .post, 
     .post-teaser {
         width:100%;
+    }
+    .post .content pre {
+        overflow-x: hidden;
+    }
+}
+
+@media all and (max-width: 600px){
+    .post .content pre {
+        overflow-x: scroll;
     }
 }
