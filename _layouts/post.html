@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="light yellow">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="{{ site.description }}">
+
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/post.css" rel="stylesheet">
+    <link href="/css/solarized.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
+ript>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+        <div class="bg-button dark"></div>
+        <div class="bg-button light"></div>
+        <a class="image-holder" href="http://twitter.com/allouis_">
+            <img src="/content/gravatar.jpeg"/>
+        </a>
+        <p>
+        Fabien O'Carroll.<br> Javascript developer <a href="http://twitter.com/leftlogic">@leftlogic</a> for <a href="http://jsbin.com">jsbin</a>.<br>
+        I'm on <a href="http://twitter.com/allouis_">Twitter</a> &amp;&amp; <a href="http://github.com/allouis">GitHub</a>.
+        </p>
+    </header>
+  
+<article class="post">
+  <h1> {{ page.title }}
+    <i class="date" datetime="{{page.date}}">
+      {{ page.date | date_to_long_string }}
+    </i>
+  </h1>
+  <div class="content">
+    {{content}}
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'allouis'; // required: replace example with your forum shortname
+
+    (function() {
+     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+    </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</article>
+
+    <footer>
+    <!--
+        <div id="footer-signature"></div>
+        <div class="color-scheme">
+            <div class="box bg"></div>
+            <div class="box red"></div>
+            <div class="box blue"></div>
+            <div class="box orange"></div>
+            <div class="box cyan"></div>
+            <div class="box magenta"></div>
+            <div class="box green"></div>
+            <div class="box violet"></div>
+            <div class="box yellow"></div>
+            <div class="save-color-scheme"></div>
+        </div>
+    -->
+    </footer>
+
+    <script src="/js/color-scheme.js"></script>
+  </body>
+</html>
+
