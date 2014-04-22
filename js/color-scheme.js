@@ -42,19 +42,34 @@
 
     window.setHighlight = setHighlight;
 
+    var disqus_thread = document.querySelector('#disqus_thread');
+
+    function reloadDisqus () {
+      disqus_thread.innerHTML = '';
+      DISQUS.next.host.loader.loadEmbed()
+    }
+
     document.querySelector('.bg-button.light')
         .addEventListener('click', function(){
+            if (html.classList.contains('light')) {
+              return;
+            }            
             html.classList.remove('dark');
             html.classList.add('light');
             sessionStorage.bg = 'light';
+            reloadDisqus();
         }
     );
 
     document.querySelector('.bg-button.dark')
         .addEventListener('click', function(){
+            if (html.classList.contains('dark')) {
+              return;
+            }
             html.classList.remove('light');
             html.classList.add('dark');
             sessionStorage.bg = 'dark';
+            reloadDisqus();
         }
     );
 
