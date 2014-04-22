@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{% for post in site.posts %}  
+  {% assign content = post.content %}
+  {% include post_teaser.html %}
+{% endfor %}  
+
