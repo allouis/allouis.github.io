@@ -32,6 +32,7 @@
             return randomHighlights();
         }
         localStorage.setItem("oldHighlightIndex", highlightIndex);
+        sessionStorage.color = highlights[highlightIndex];
         setHighlight(highlights[highlightIndex]);
     }
 
@@ -41,20 +42,11 @@
 
     window.setHighlight = setHighlight;
 
-    var now = new Date();
-
-    var hour = now.getHours();
-
-    if (hour < 6 || hour > 18) {
-        html.classList.remove('light');
-        html.classList.add('dark');
-    }
-    randomHighlights();
-
     document.querySelector('.bg-button.light')
         .addEventListener('click', function(){
             html.classList.remove('dark');
             html.classList.add('light');
+            sessionStorage.bg = 'light';
         }
     );
 
@@ -62,7 +54,28 @@
         .addEventListener('click', function(){
             html.classList.remove('light');
             html.classList.add('dark');
+            sessionStorage.bg = 'dark';
         }
     );
+
+    var now = new Date();
+
+    var hour = now.getHours();
+
+    if (sessionStorage.color) {
+      setHighlight(sessionStorage.color); 
+    } else {
+      randomHighlights();
+    }
+
+    if (sessionStorage.bg) {
+      html.classList.remove('light');
+      html.classList.add(sessionStorage.bg);
+    } else 
+    if (hour < 6 || hour > 18) {
+      html.classList.remove('light');
+      html.classList.add('dark');
+    }
+
 
 }());
