@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-{% assign post = site.posts.first %}
-{% assign content = post.content %}
-{% include post.html %}
+{% for post in site.posts %}  
+  {% assign content = post.content %}
+  {% include post_teaser.html %}
+{% endfor %}  
 
