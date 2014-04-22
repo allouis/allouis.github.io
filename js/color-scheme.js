@@ -32,6 +32,7 @@
             return randomHighlights();
         }
         localStorage.setItem("oldHighlightIndex", highlightIndex);
+        sessionStorage.color = highlights[highlightIndex];
         setHighlight(highlights[highlightIndex]);
     }
 
@@ -41,28 +42,55 @@
 
     window.setHighlight = setHighlight;
 
-    var now = new Date();
+    var disqus_thread = document.querySelector('#disqus_thread');
 
-    var hour = now.getHours();
-
-    if (hour < 6 || hour > 18) {
-        html.classList.remove('light');
-        html.classList.add('dark');
+    function reloadDisqus () {
+      disqus_thread.innerHTML = '';
+      DISQUS.next.host.loader.loadEmbed()
     }
-    randomHighlights();
 
     document.querySelector('.bg-button.light')
         .addEventListener('click', function(){
+            if (html.classList.contains('light')) {
+              return;
+            }            
             html.classList.remove('dark');
             html.classList.add('light');
+            sessionStorage.bg = 'light';
+            reloadDisqus();
         }
     );
 
     document.querySelector('.bg-button.dark')
         .addEventListener('click', function(){
+            if (html.classList.contains('dark')) {
+              return;
+            }
             html.classList.remove('light');
             html.classList.add('dark');
+            sessionStorage.bg = 'dark';
+            reloadDisqus();
         }
     );
+
+    var now = new Date();
+
+    var hour = now.getHours();
+
+    if (sessionStorage.color) {
+      setHighlight(sessionStorage.color); 
+    } else {
+      randomHighlights();
+    }
+
+    if (sessionStorage.bg) {
+      html.classList.remove('light');
+      html.classList.add(sessionStorage.bg);
+    } else 
+    if (hour < 6 || hour > 18) {
+      html.classList.remove('light');
+      html.classList.add('dark');
+    }
+
 
 }());
