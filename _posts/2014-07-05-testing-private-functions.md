@@ -44,7 +44,7 @@ module.exports = sum;
 
 There are a few benefits from this, mainly:
 
- - The module is now a self contained folder, perfect for publishing to npm, a simple `git filter-branch --subdirectory-filter` it's in a seperate repo
+ - The module is now a self contained folder, perfect for publishing to npm, a simple `git filter-branch --subdirectory-filter` makes it a seperate repo.
  - There is still no access to the `sum` function from the stats module, but can require it when we're writing tests for it.
  
 I should note that yes, the consumer of the module *could* require in the sum.js file (even if it meant traversing `node_modules`). But this is clearly not the correct thing to do, and arguably, with the method shown in the mentioned blog post, the consumer could just set theit `$NODE_ENV` to `'test'` but again, this is not the correct thing to do, but they *can* do it. 
