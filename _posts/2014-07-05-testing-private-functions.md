@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Testing private functions in node
-description: <p> A better way of organising your private functions and testing them </p>
+title: Testing private functions
+description: <p> A better way of organising your private functions and testing them in node </p>
 ---
-
-# Testing Private Functions in JavaScript Modules
 
 Last week I saw a [blog post about testing private functions](http://engineering.clever.com/2014/07/29/testing-private-functions-in-javascript-modules) within CommonJS modules. The approach taken was checking enviroment variables and exporting private functions when in "test mode".
 
