@@ -8,7 +8,7 @@ Last week I saw a [blog post about testing private functions](http://engineering
 
 It reminded me of a conversation I had at the pub with [Mark Everitt](https://twitter.com/qubyte) a few weeks back about testing private methods, and this post shows that way of doing this.
 
-In the article we have a `stats` module file
+In the original article we have a `stats` module file
 
 {% highlight javascript %}
 // file: stats.js
