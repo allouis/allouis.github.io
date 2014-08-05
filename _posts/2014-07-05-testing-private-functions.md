@@ -1,3 +1,9 @@
+---
+layout: post
+title: Testing private functions in node
+description: <p> A better way of organising your private functions and testing them </p>
+---
+
 # Testing Private Functions in JavaScript Modules
 
 Last week I saw a [blog post about testing private functions](http://engineering.clever.com/2014/07/29/testing-private-functions-in-javascript-modules) within CommonJS modules. The approach taken was checking enviroment variables and exporting private functions when in "test mode".
@@ -6,7 +12,7 @@ It reminded me of a conversation I had at the pub with [Mark Everitt](https://tw
 
 In the article we have a `stats` module file
 
-```js
+{% highlight javascript %}
 // file: stats.js
 var sum = function (nums) { ... };
 module.exports = {
@@ -16,27 +22,27 @@ module.exports = {
 if (process.env.NODE_ENV === 'test') {
   module.exports._private = { sum: sum };
 }
-```
+{% endhighlight %}
 This works, but I think it's ugly.
 
 The reason I think this is ugly is that the bottom conditional doesn't belong in this file, logic to do with testing should be contained the the test files themselves, you'll also end up bloating your code base with these conditionals when you have a lot of modules with private functions.
 
 What I would suggest having a `stats` module *folder*, with private functions within that.
 
-```js
+{% highlight javascript %}
 // file: stats/index.js
 var sum = require('./sum');
 module.exports = {
   mean: function (nums) { ... },
   standardDeviation: function (nums) { ... },
 };
-```
+{% endhighlight %}
 
-```js
+{% highlight javascript %}
 // file: stats/sum.js
 var sum = function (nums) { ... };
 module.exports = sum;
-```
+{% endhighlight %}
 
 There are a few benefits from this, mainly:
 
