@@ -1,8 +1,7 @@
 .post {
-
-    width: 600px;
-    margin: auto;
-    box-sizing: border-box;
+  width: 600px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 .post h1 {
@@ -10,49 +9,50 @@
 }
 
 .post .date {
-    float: right;
-    font-size:11px;
-    font-style:normal;
+  float: right;
+  font-size:11px;
+  font-style:normal;
 }
 
 .post .content {
 }
 
 .post .content p {
-    font-size:1.6em;
+  font-size:1.6em;
 }
 
 .post .content code {
-    font-size:1.2em;
+  font-size:1.2em;
 }
 
 .post .content li {
   font-size:1.4em;
+  margin-bottom:1em;
 }
 
 .post .content p code,
 .post .content li code {
-    font-size:0.8em;
+  font-size:0.8em;
 }
 
 .post .content pre {
-    overflow-x: visible;
+  overflow-x: visible;
 }
 
 
 @media all and (max-width: 600px){
 
-    .post, 
-    .post-teaser {
-        width:100%;
-    }
-    .post .content pre {
-        overflow-x: hidden;
-    }
+  .post, 
+  .post-teaser {
+    width:100%;
+  }
+  .post .content pre {
+    overflow-x: hidden;
+  }
 }
 
 @media all and (max-width: 600px){
-    .post .content pre {
-        overflow-x: scroll;
-    }
+  .post .content pre {
+    overflow-x: scroll;
+  }
 }
